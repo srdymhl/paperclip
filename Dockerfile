@@ -59,7 +59,8 @@ ENV NODE_ENV=production \
 EXPOSE 3100
 
 USER node
-CMD ["sh", "-c", "node --import ./server/node_modules/tsx/dist/loader.mjs server/dist/index.js & sleep 20 && node cli/node_modules/tsx/dist/cli.mjs cli/src/index.ts auth bootstrap-ceo 2>&1 || true && wait"]
+CMD ["sh", "-c", "node cli/node_modules/tsx/dist/cli.mjs cli/src/index.ts onboard --yes 2>&1 && node --import ./server/node_modules/tsx/dist/loader.mjs server/dist/index.js & sleep 25 && node cli/node_modules/tsx/dist/cli.mjs cli/src/index.ts auth bootstrap-ceo 2>&1 || true && wait"]
+
 
 
 
