@@ -51,7 +51,10 @@ ENV NODE_ENV=production \
   PAPERCLIP_CONFIG=/paperclip/instances/default/config.json \
   PAPERCLIP_DEPLOYMENT_MODE=authenticated \
   PAPERCLIP_DEPLOYMENT_EXPOSURE=public \
-  BETTER_AUTH_SECRET=842d6d85fe94860010019df995af6fe2af0f3ecd790456e5e1f19908fb86a192
+  BETTER_AUTH_SECRET=842d6d85fe94860010019df995af6fe2af0f3ecd790456e5e1f19908fb86a192 \
+  PAPERCLIP_AUTH_BASE_URL_MODE=explicit \
+  PAPERCLIP_AUTH_PUBLIC_BASE_URL=https://talented-commitment-production-47ac.up.railway.app
+
 
 EXPOSE 3100
 
